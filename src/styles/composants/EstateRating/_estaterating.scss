@@ -1,0 +1,23 @@
+@import "../../variables/variables";
+
+.estate-rating {
+    display: flex;
+    font-size: 25px;
+
+    .star {
+        margin-left: 10px;
+        color: $main-color;
+    }
+
+    .star-empty {
+        color: $star-empty;
+    }
+}
+
+// Media Queries
+
+@media screen and (max-width: 768px) {
+    .estate-rating {
+        font-size: 18px;
+    }
+}

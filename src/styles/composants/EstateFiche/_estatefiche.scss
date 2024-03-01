@@ -1,0 +1,57 @@
+.fiche-estate-mobile {
+    width: 100%;
+
+    .first-container {
+        @include flexbox(row, space-between, none);
+    }
+
+    .second-container {
+        display: flex;
+        justify-content: space-between;
+
+        .collapse-container {
+            width: 45%;
+        }
+    }
+}
+
+// Media Queries
+
+@media screen and (max-width: 768px) {
+    .fiche-estate-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+
+        .first-container {
+            width: 90%;
+            flex-direction: column;
+            margin: 0px;
+
+            .estate-profil-mobile {
+                display: flex;
+                @include flexbox(row-reverse, space-between, center);
+                text-align: center;
+                width: 100%;
+                margin-bottom: 13.5px;
+                gap: 25px;
+            }
+        }
+
+        .second-container {
+            flex-direction: column;
+            width: 90%;
+
+            .collapse-container {
+                width: 100%;
+
+                ul {
+                    padding: 0;
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+}

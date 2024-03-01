@@ -1,0 +1,116 @@
+@import "../../variables/variables";
+
+.carrousel {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+
+    .previousButton {
+        position: absolute;
+        z-index: 2;
+        height: 415px;
+        background: none;
+        font-size: 70px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .carrousel-container {
+        border-radius: 25px;
+        width: 100%;
+        position: relative;
+        height: 415px;
+
+        .carrousel-img {
+            height: 415px;
+            z-index: 1;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            transition: opacity 0.5s ease 0s;
+            width: 100%;
+
+            .setImg {
+                border-radius: 25px;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .nextButton {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        z-index: 2;
+        height: 415px;
+        background: none;
+        font-size: 70px;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .carrousel-counter {
+        @include flexbox(row, center, center);
+        position: absolute;
+        bottom: 25px;
+        left: 0px;
+        z-index: 2;
+        width: 100%;
+        @include font-montserrat-500(18px, white, 142.6%);
+    }
+}
+
+//Media Queries
+
+@media screen and (max-width: 768px) {
+    .carrousel {
+        display: flex;
+        width: 90%;
+        height: 255px;
+        margin-bottom: 15px;
+
+        .previousButton {
+            height: 255px;
+            font-size: 20px;
+        }
+
+        .nextButton {
+            height: 255px;
+            font-size: 20px;
+        }
+
+        .carrousel-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 255px;
+
+            .carrousel-img {
+                width: 100%;
+                height: 255px;
+
+                .setImg {
+                    border-radius: 10px;
+                }
+            }
+        }
+        .carrousel-counter {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.collapse-container-apropos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 38px;
+}
+
+// Media Queries
+
+@media screen and (max-width: 768px) {
+    .collapse-container-apropos {
+        margin-top: 19px;
+    }
+}

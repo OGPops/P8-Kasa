@@ -1,0 +1,69 @@
+@import "../../variables/variables";
+
+.card-content {
+    width: 340px;
+    height: 340px;
+    position: relative;
+    @include flexbox(row, center, none);
+    flex-basis: calc(33.33% - 10px);
+    border-radius: 5px;
+    margin-bottom: 40px;
+    transition: all 0.5s ease;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        filter: blur(0.8px);
+    }
+
+    .card-cover {
+        width: 340px;
+        height: 340px;
+        object-fit: cover;
+        border-radius: 10px;
+        mix-blend-mode: darken;
+        filter: brightness(0.85);
+    }
+
+    .card-title-container {
+        position: absolute;
+        width: 300px;
+        height: 60px;
+        @include flexbox(row, none, center);
+        top: 275px;
+        margin: 0 20px 20px 20px;
+
+        .card-title {
+            @include font-montserrat-500(18px, white, 142.6%);
+        }
+    }
+}
+
+//Media Queries
+
+@media screen and (max-width: 768px) {
+    .card-content {
+        padding-bottom: 20px;
+        width: 90%;
+        height: 255px;
+        display: block;
+
+        .card-cover {
+            width: 100%;
+            height: 255px;
+        }
+
+        .card-title-container {
+            position: absolute;
+            width: 300px;
+            height: 60px;
+            @include flexbox(row, none, center);
+            top: 180px;
+            margin: 0 20px 20px 20px;
+
+            .card-title {
+                @include font-montserrat-500(18px, white, 142.6%);
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@import "./styles/variables/variables";
+@import "./settings.scss";
+
+@import "./styles/composants/Header/header";
+@import "./styles/composants/Footer/footer";
+@import "./styles/composants/Card/Card";
+@import "./styles/composants/Collapse/Collapse";
+@import "./styles/composants/TopBackground/TopBackground";
+@import "./styles/composants/Erreur404/erreur404";
+@import "./styles/composants/Carrousel/Carrousel";
+@import "./styles/composants/EstateTitle/EstateTitle";
+@import "./styles/composants/EstateProfil/EstateProfil";
+@import "./styles/composants/EstateFiche/EstateFiche";
+@import "./styles/composants/EstateTags/EstateTags";
+@import "./styles/composants/EstateRating/EstateRating";
+
+@import "./styles/pages/apropos";
+@import "./styles/pages/home";
+@import "./styles/pages/estate";

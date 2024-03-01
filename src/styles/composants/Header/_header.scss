@@ -1,0 +1,56 @@
+@import "../../variables/variables";
+
+.header-container {
+    @include flexbox(row, space-between, center);
+    width: 100%;
+    margin-top: 45px;
+    margin-bottom: 50px;
+
+    .logo {
+        display: flex;
+        width: 210px;
+        height: 68px;
+        padding: 20px 0px;
+    }
+
+    .header-link {
+        @include flexbox(row, flex-start, center);
+        gap: 57px;
+
+        .text-link {
+            @include font-montserrat-500(24px, $main-color, 142.6%);
+            width: 136px;
+            text-align: right;
+            text-decoration: none;
+
+            &.active {
+                text-decoration-line: underline;
+            }
+        }
+    }
+}
+
+//Media Queries
+
+@media screen and (max-width: 768px) {
+    .header-container {
+        width: 100%;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        .logo {
+            width: 145px;
+        }
+
+        .header-link {
+            gap: 26px;
+
+            .text-link {
+                font-size: 12px;
+                text-transform: uppercase;
+                width: auto;
+            }
+        }
+    }
+}
